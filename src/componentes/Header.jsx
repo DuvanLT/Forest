@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
+    <>
+    <header>
     <nav>
       <ul>
       <li>
@@ -10,7 +12,6 @@ function Header() {
       <li>
           <Link to="/arboles">Arboles</Link>
         </li>
-    
       <li>
           <Link to="/captions">Captions</Link>
         </li>
@@ -22,6 +23,13 @@ function Header() {
         </li>
       </ul>
     </nav>
+    <div className="menu">
+      <div className="first line"></div>
+      <div className="second line"></div>
+      <div className="third line"></div>
+    </div>
+    </header>
+    </>
   );
 }
 
