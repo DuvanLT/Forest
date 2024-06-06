@@ -1,11 +1,20 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const [nav,setNav] = useState(false)
+
+  nav ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible"
+  function handleClick() {
+    setNav(!nav)
+    
+  }
+
   return (
     <>
     <header>
     <nav>
-      <ul>
+      <ul className={`${nav ? "openNav" : ""} `}>
       <li>
           <Link to="/">Inicio</Link>
         </li>
@@ -23,7 +32,7 @@ function Header() {
         </li>
       </ul>
     </nav>
-    <div className="menu">
+    <div className="menu" onClick={() => {handleClick()}}>
       <div className="first line"></div>
       <div className="second line"></div>
       <div className="third line"></div>

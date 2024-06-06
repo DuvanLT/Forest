@@ -20,7 +20,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: #fff;
-    background-color: green;
+    background: rgb(135, 240, 135);
 }
 .line{
     width: 3.4px;
@@ -34,17 +34,7 @@ nav ul li a:hover{
 }
 .third{
     height: 10px;
-}
-.menu{
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 3.5px;
-    cursor: pointer;
-    padding: 2px;
-}
-
+} 
 .hero{
     z-index: -1;
     position: absolute;
@@ -66,14 +56,10 @@ nav ul li a:hover{
     position: absolute;
     z-index: 40;
     color: #fff;
-
-
-    h1{
-        font-size: 120px;
-        letter-spacing: 20px;
-    }
 }
-
+.openNav{
+    top: 0px;
+}
 @media (max-width:1020px) {
     header{
         padding-left: 0 ;
@@ -83,10 +69,11 @@ nav ul li a:hover{
         ul{
             flex-direction: column;
             position: absolute;
-            background: green;
+            background: rgb(135, 240, 135);
             padding: 20px;
             top: -9999px;
             height: 200vw;
+            transition: all 1s;
         }
     }
     .hero_text{
@@ -94,6 +81,34 @@ nav ul li a:hover{
     justify-content: center;
         h1{
         font-size: 16px;
+        letter-spacing: 10px;
         }
+    }
+
+    .menu{
+        width: fit-content;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 3.5px;
+        cursor: pointer;
+        padding: 2px;
+        display: flex;
+    }
+}
+
+@media (min-width: 480px) {
+    .hero_text h1{
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1024px){
+    .hero_text h1{
+        font-size: 120px;
+        letter-spacing: 20px;
+    }
+
+    .menu{
+        display: none;
     }
 }
