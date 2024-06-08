@@ -8,6 +8,7 @@ import arbol6 from './images/Matasia.webp';
 import arbol7 from './images/Melicoccus.jpeg';
 import arbol8 from './images/Simira.jpg';
 import Card from './componentes/Card'
+import Accordion from './componentes/Accordion';
 export default function Arboles() {
     return (
         <>
@@ -34,6 +35,7 @@ export default function Arboles() {
                         </Card>
                     </div>
                 </section>
+                <Accordion title1="hola" descripcion1="hola" title2="hola" descripcion2="hola" title3="hola" descripcion3="hola" />
             </section>
 
         </>
